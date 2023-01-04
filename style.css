@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+
+/*se a altura do navegador é 900px, 1vh equivale a 9px.
+
+E, analogamente, se a largura da viewport é 750px, 1vw equivale a 7.5px.*/
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+    *align-items: se refere ao eixo y
+    *justify-content: se refere ao eixo y
+    */
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*colocar elementos um abaixo do outro*/
+}
+
+.left-login>h1 {
+    color: #77ffc0;
+}
+
+.left-img {
+    width: 35vw;
+    font-size: 3vw;
+}
+
+.rigth-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*o vw e o vh pegam o tamanho da viewpoint
+a % utiliza o tamanho da div em que a imagem está*/
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    /*padding: eixo y eixo x*/
+    background: #2f282f41;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login>h1 {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    /*quando usamos essa propriedade o justify-content passa a alinhar o eixo x e o align-item passa a alinhar o eixo y*/
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield>label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px#00ff8052;
+}
+
+@media screen and (max-width: 950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+    .left-login>h1 {
+        display: none;
+    }
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+    .rigth-login {
+        width: 100%;
+        height: auto;
+    }
+    .left-login>img {
+        width: 50vw;
+    }
+    .card-login {
+        width: 90%;
+    }
+}
